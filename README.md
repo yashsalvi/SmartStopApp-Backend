@@ -37,9 +37,10 @@ Project is created with:
 Node.js, Mysql, Swift, Firebase.
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project, install the following and then run it locally using npm:
 
 ```
+$ Install Xampp,Node.js
 $ npm install
 $ npm i sequelize-cli
 $ sequelize db:migrate
