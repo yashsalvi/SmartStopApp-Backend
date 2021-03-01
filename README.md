@@ -29,7 +29,7 @@ and allows the officer to know more about the person.
 	
 ## Technologies
 Project is created with:
-Node.js,Express,Swift,Firebase.
+Node.js, Mysql, Swift,Firebase.
 	
 ## Setup
 To run this project, install the following:
@@ -43,4 +43,4 @@ https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code
 ```
 
 ## Visuals
-If required refer to the Screenshots and videos folder of the project.
+If required ypui can refer to the Screenshots and videos folder of the project.
