@@ -37,14 +37,13 @@ Project is created with:
 Node.js, Mysql, Swift, Firebase.
 	
 ## Setup
-To run this project, install the following:
+To run this project, install it locally using npm:
 
 ```
-* Install .net framework ,Sql server from the below links:
-1.https://dev.mysql.com/doc/mysql-installation-excerpt/8.0/en/windows-install-archive.html
-2.https://dotnet.microsoft.com/download/dotnet-framework
-* Finally ,run the commands listed in the below link :
-https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code
+$ npm install
+$ npm i sequelize-cli
+$ sequelize db:migrate
+$ npm start
 ```
 
 ## Visuals
