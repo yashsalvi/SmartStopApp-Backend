@@ -1,5 +1,5 @@
 # SmartStopApp-Backend
-SmartStopApp is an iOS app.
+Smart-Stop is an iOS app.
 
 ## Table of contents
 * [Description](#description)
