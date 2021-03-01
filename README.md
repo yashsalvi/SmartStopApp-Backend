@@ -48,4 +48,4 @@ https://docs.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code
 ```
 
 ## Visuals
-If required ypui can refer to the Screenshots and videos folder of the project.
+If required you can refer to the Screenshots and videos folder of the project.
