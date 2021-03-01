@@ -29,7 +29,7 @@ and allows the officer to know more about the person.
 	
 ## Technologies
 Project is created with:
-Node.js, Mysql, Swift,Firebase.
+Node.js, Mysql, Swift, Firebase.
 	
 ## Setup
 To run this project, install the following:
