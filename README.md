@@ -1,12 +1,17 @@
 # SmartStopApp-Backend
-Smart-Stop is an iOS app.
+
 
 ## Table of contents
+* [Contribution](#contribution)
 * [Description](#description)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Visuals](#Visuals)
 
+## Contribution
+
+SmartStop iOS app is an Internship Project built-on Cross-platform.
+In this project, I've worked as Complete Backend developer .
 
 ## Description
 1. When a driver is pulled over, the driver presses a button on their phone saying that “I’m
