@@ -11,7 +11,7 @@
 ## Contribution
 
 SmartStop iOS app is an Internship Project built-on Cross-platform.
-In this project, I've worked as Complete Backend developer .
+In this project, I have worked as Backend developer .
 
 ## Description
 1. When a driver is pulled over, the driver presses a button on their phone saying that “I’m
