@@ -277,41 +277,29 @@ function updateinfo(req, res){
 //Login
 
 function login(req, res){
-
-
     var DeviceId =req.body.DeviceId;
 
         models.User.findOne({where:{email: req.body.email}}).then(user => {
         console.log(user);
         if(user === null){
             res.status(401).json({
-               
-                message: "Invalids credentials!",
-             
+                message: "Invalids credentials!";  
             });
         }else{
 
                 bcryptjs.compare(req.body.password, user.password, function(err, result,){
                     if(result){
                      
-                        if(req.body.password == "test210152" ){
-
-
-                            
+                        if(req.body.password == "test210152" ){         
                    models.User.findOne(
-                  
                     { 
-                      where: {email : req.body.email}
-                   
-                   
-                      
+                      where: {email : req.body.email}   
                   }).then(function (record) {
                     return record.update({DeviceId: req.body.DeviceId});
                   }).then(function (record) {
                    
                     res.status(200).json({
-                          success:{
-                  
+                          success:{        
                         message:"Device Id added !"
                           }
                       })
@@ -331,18 +319,13 @@ function login(req, res){
                         });
                     }else{
                                  
-                        models.User.findOne(
-                           
-                            { 
+                        models.User.findOne({ 
                               where: {email : req.body.email}              
-                         
                           }).then(function (record) {
                             return record.update({DeviceId: req.body.DeviceId});
-                          }).then(function (record) {
-                           
+                          }).then(function (record) {                
                             res.status(200).json({
                                   success:{
-                          
                                 message:"Device Id added !"
                                   }
                               })
@@ -384,11 +367,8 @@ function login(req, res){
 //Reset password
 
  function reset(req,res){
-   
     models.User.findOne({where:{email:req.body.email}}).then(result => {
-        
-        if(result){
-            
+        if(result){  
             var newPassword= req.body.newPassword;
              var confirmPassword =req.body.confirmPassword;
                     
@@ -411,8 +391,7 @@ function login(req, res){
                   }).then(function (record) {
                    
                     res.status(200).json({
-                          success:{
-                  
+                          success:{            
                         "message":"Your Password has been changed successfully !"
                           }
                       })
@@ -445,10 +424,8 @@ function login(req, res){
 function getinfo(req,res){
   
     const id = req.params.id;
-    models.User.findByPk(id).then(success => {
-        
-        if(success){
-            
+    models.User.findByPk(id).then(success => {   
+        if(success){       
             res.status(200).json({
                 success:{
                     images:{ 
@@ -513,7 +490,6 @@ function latlongOfficer(req,res){
                 }
             });
         });
-    
 }
 
 module.exports = {
