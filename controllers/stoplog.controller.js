@@ -2,7 +2,6 @@ const models = require('../models');
 
 
 function stops(req, res){
-
     const stoplog = {
         firstname: req.body.firstname,
         middlename: req.body.middlename,
@@ -13,8 +12,7 @@ function stops(req, res){
     }
     models.Stoplog.create(stoplog).then(result => {
         res.status(201).json({
-            message: "User added to the stop log successfully",
-           
+            message: "User added to the stop log successfully",        
         });
     }).catch(error => {
         res.status(500).json({
@@ -23,14 +21,8 @@ function stops(req, res){
             }
         });
     });
-
-
 }
 
-
-
 module.exports = {
-   
-    stops: stops,
-    
+    stops: stops,  
 }
