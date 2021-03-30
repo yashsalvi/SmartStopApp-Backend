@@ -9,7 +9,9 @@ const router = express.Router();
  * @type : POST
  * @access : -
  * @description : This route is used to register the user
- * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered ]
+ * @requires : * {
+    "email" : "",
+    "password" : ""
  */
 router.post('/sign-up',[body('email').isEmail(), body('password').not().isEmpty()], userController.signUp);
 
