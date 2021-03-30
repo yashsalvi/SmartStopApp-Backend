@@ -4,13 +4,13 @@ const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator');
 var haversine = require("haversine-distance");
 
+//Sign up
 function signUp(req, res){
     // Validation Errors
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
-    }   
-    //Sign up
+    }     
     models.User.findOne({where:{email:req.body.email}}).then(result => {
         if(result){
             res.status(403).json({
@@ -83,7 +83,7 @@ function signUp(req, res){
 
 //GPS
 
-function Latlong(req, res){
+function latLong(req, res){
 
      var lat1= req.body.Latitude;
      var lng1= req.body.Longitude;
@@ -233,7 +233,7 @@ function Latlong(req, res){
 }
 
 
-function updateinfo(req, res){
+function updateInfo(req, res){
 
     models.User.findOne({where:{id:req.body.id,isPolice:false}}).then(result => {
 
@@ -419,9 +419,7 @@ function login(req, res){
 }
 
 
-//Getinfo
-
-function getinfo(req,res){
+function getInfo(req,res){
   
     const id = req.params.id;
     models.User.findByPk(id).then(success => {   
@@ -460,7 +458,7 @@ function getinfo(req,res){
 
 }
     
-function latlongOfficer(req,res){
+function latLongOfficer(req,res){
     models.User.findOne({where:{id:req.body.id,isPolice:true}}).then(result => {
                 if(result){
                     models.User.findOne(
@@ -495,9 +493,9 @@ function latlongOfficer(req,res){
 module.exports = {
     signUp: signUp,
     login: login,
-    latlongOfficer: latlongOfficer,
-    getinfo: getinfo,
-    updateinfo: updateinfo,
-    Latlong: Latlong,
+    latLongOfficer: latLongOfficer,
+    getInfo: getInfo,
+    updateInfo: updateInfo,
+    latLong: latLong,
     reset:reset
 } 
