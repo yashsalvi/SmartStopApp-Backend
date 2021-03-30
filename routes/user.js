@@ -13,15 +13,16 @@ const router = express.Router();
     "email" : "",
     "password" : ""
  */
-router.post('/sign-up',[body('email').isEmail(), body('password').not().isEmpty()], userController.signUp);
+router.post('/signUp',[body('email').isEmail(), body('password').not().isEmpty()], userController.signUp);
 
 /**
  * @type : POST
  * @access : -
  * @description : This route is used to login the user
- * @requires : * @requires : * {
+ * @requires :  {
     "email" : "",
     "password" : ""
+    }
  */
 router.post('/login',[body('email').isEmail()], userController.login);
 
@@ -31,7 +32,7 @@ router.post('/login',[body('email').isEmail()], userController.login);
  * @description : This route is used to handle the status of whatsapp message status
  * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered ]
  */
-router.post('/Latlong',[body('id').not().isEmpty()], userController.Latlong);
+router.post('/latLong',[body('id').not().isEmpty()], userController.latLong);
 
 /**
  * @type : POST
@@ -39,7 +40,7 @@ router.post('/Latlong',[body('id').not().isEmpty()], userController.Latlong);
  * @description : This route is used to handle the status of whatsapp message status
  * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered ]
  */
-router.post('/latlongOfficer',[body('id').not().isEmpty()], userController.latlongOfficer);
+router.post('/latLongOfficer',[body('id').not().isEmpty()], userController.latLongOfficer);
 
 /**
  * @type : GET
@@ -47,13 +48,13 @@ router.post('/latlongOfficer',[body('id').not().isEmpty()], userController.latlo
  * @description : This route is used to handle the status of whatsapp message status
  * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered]
  */
-router.get('/getinfo/:id',checkAuth.checkAuth,userController.getinfo);
+router.get('/getInfo/:id',checkAuth.checkAuth,userController.getInfo);
 
 /**
  * @type : PUT
  * @access : --user<Bearer token>
  * @description : This route is used to handle the status of whatsapp message status
- * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered ]
+ * @requires : id<params>
  */
 router.put('/reset', [body('password').not().isEmpty()],checkAuth.checkAuth, userController.reset);
 
@@ -63,7 +64,7 @@ router.put('/reset', [body('password').not().isEmpty()],checkAuth.checkAuth, use
  * @description : This route is used to handle the status of whatsapp message status
  * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered]
  */
-router.post('/updateinfo', checkAuth.checkAuth,userController.updateinfo);
+router.post('/updateInfo', checkAuth.checkAuth,userController.updateInfo);
 
 
 
