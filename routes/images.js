@@ -6,7 +6,12 @@ const imageUploader = require('../helpers/image-uploader');
 
 const router = express.Router();
 
-
+/**
+ * @type : POST
+ * @access : -
+ * @description : This route is used to upload the Images
+ * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered ]
+ */
 router.post('/upload/:id', imageUploader.upload.fields([{
     name: 'drivingLicense', maxCount: 1
   }, {
