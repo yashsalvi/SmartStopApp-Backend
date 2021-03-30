@@ -21,9 +21,7 @@ router.post('/upload/:id', imageUploader.upload.fields([{
   },{
     name: 'profileimage', maxCount: 1
   }]),imageController.upload);
+
 module.exports = router;
-
-
-// module.exports = router;
 
 
