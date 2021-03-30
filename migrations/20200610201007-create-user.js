@@ -8,17 +8,17 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      firstname: {
+      firstName: {
         allowNull: false,
         type: Sequelize.STRING
         
       },
-      middlename: {
+      middleName: {
         allowNull: false,
         type: Sequelize.STRING
         
       },
-      lastname: {
+      lastName: {
         allowNull: false,
         type: Sequelize.STRING
         
@@ -38,7 +38,7 @@ module.exports = {
         type: Sequelize.STRING
         
       },
-      Badgeno: {
+      badgeNo: {
         allowNull: false,
         type: Sequelize.STRING
         
@@ -49,10 +49,10 @@ module.exports = {
       Rank: {
         type: Sequelize.STRING
       },
-      drivinglicensestate: {
+      drivingLicenseState: {
         type: Sequelize.STRING
       },
-      drivinglicenseno: {
+      drivingLicenseNo: {
         type: Sequelize.STRING
       },
       password: {
@@ -62,11 +62,11 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING
       },
-      phonenumber: {
+      phoneNumber: {
         allowNull: false,
         type: Sequelize.STRING
       },
-      PoliceStationName: {
+      policeStationName: {
         allowNull: false,
         type: Sequelize.STRING
       },
@@ -96,7 +96,7 @@ module.exports = {
         type: Sequelize.STRING
       },
      
-      profileimage: {
+      profileImage: {
         allowNull: false,
         type: Sequelize.STRING
       },
