@@ -19,7 +19,9 @@ router.post('/sign-up',[body('email').isEmail(), body('password').not().isEmpty(
  * @type : POST
  * @access : -
  * @description : This route is used to login the user
- * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered ]
+ * @requires : * @requires : * {
+    "email" : "",
+    "password" : ""
  */
 router.post('/login',[body('email').isEmail()], userController.login);
 
