@@ -1,16 +1,16 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  const Stoplog = sequelize.define('Stoplog', {
-    firstname: DataTypes.STRING,
-    middlename: DataTypes.STRING,
-    lastname: DataTypes.STRING,
-    drivinglicensestate: DataTypes.STRING,
-    stoptime:DataTypes.STRING,
+  const stopLog = sequelize.define('stopLog', {
+    firstName: DataTypes.STRING,
+    middleName: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    drivingLicenseState: DataTypes.STRING,
+    stopTime:DataTypes.STRING,
    
   
   }, {});
-  Stoplog.associate = function(models) {
+  stopLog.associate = function(models) {
     // associations can be defined here
   };
-  return Stoplog;
+  return stopLog;
 };
