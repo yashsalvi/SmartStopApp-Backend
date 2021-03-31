@@ -27,20 +27,20 @@ function signUp(req, res){
                         is_police = true;
                     }
                     const user = {
-                        firstname: req.body.firstname,
-                        middlename: req.body.middlename,
-                        lastname: req.body.lastname,
+                        firstName: req.body.firstName,
+                        middleName: req.body.middleName,
+                        lastName: req.body.lastName,
                         Occupation: req.body.Occupation,
                         specialConsideration: req.body.specialConsideration,
                         email: req.body.email,
-                        phonenumber:req.body.phonenumber,
-                        drivinglicense:req.body.drivinglicense,
-                        PoliceStationName:req.body.PoliceStationName,
+                        phoneNumber:req.body.phoneNumber,
+                        drivingLicense:req.body.drivingLicense,
+                        PolicestationName:req.body.PolicestationName,
                         Rank:req.body.Rank,
-                        Badgeno:req.body.Badgeno,
+                        badgeNo:req.body.badgeNo,
                         Birthdate:req.body.Birthdate,
-                        drivinglicensestate:req.body.drivinglicensestate,
-                        drivinglicenseno:req.body. drivinglicenseno,
+                        drivingLicenseState:req.body.drivingLicenseState,
+                        drivingLicenseno:req.body. drivingLicenseno,
                         race:req.body.race,
                         isPolice : is_police,
                         password: hash        
@@ -49,7 +49,7 @@ function signUp(req, res){
                     models.User.create(user).then(result => {
                         const token = jwt.sign({
                             name: req.body.name,
-                            phonenumber:req.body.phonenumber,
+                            phoneNumber:req.body.phoneNumber,
                             email: user.email,
                             userId: user.id
                        }, process.env.JWT_KEY, function(err, token){
@@ -146,9 +146,9 @@ function latLong(req, res){
                                            if(success){                
                                             res.status(200).json({
                                                success:{
-                                                    firstname:success.firstname,
-                                                   middlename:success.middlename,
-                                                   lastname:success.lastname,
+                                                    firstName:success.firstName,
+                                                   middleName:success.middleName,
+                                                   lastName:success.lastName,
                                                     id:success.id,
                                                     email:success.email
                                                }
@@ -244,7 +244,7 @@ function updateInfo(req, res){
                   where: {id:req.body.id}
 
               }).then(function (record) {                      
-                return record.update({firstname:req.body.firstname,middlename:req.body.middlename,lastname:req.body.lastname,email:req.body.email,phonenumber:req.body.phonenumber,Rank:req.body.Rank});                    
+                return record.update({firstName:req.body.firstName,middleName:req.body.middleName,lastName:req.body.lastName,email:req.body.email,phoneNumber:req.body.phoneNumber,Rank:req.body.Rank});                    
                 })
               .then(function (record) {    
                 res.status(200).json({
