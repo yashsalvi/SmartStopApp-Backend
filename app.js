@@ -3,8 +3,7 @@ const bodyParser = require('body-parser');
 
 
 const userRoute = require('./routes/user');
-const stoplogRoute = require('./routes/stoplog');
-// const officerRoute = require('./routes/officer');
+const stopLogRoute = require('./routes/stopLog');
 
 const imageRoute = require('./routes/images');
 
@@ -16,8 +15,7 @@ app.use('/uploads', express.static('uploads'));
 
 
 app.use("/user", userRoute);
-app.use("/stoplog", stoplogRoute);
-// app.use("/officer", officerRoute);
+app.use("/stopLog", stopLogRoute);
 
 app.use("/images", imageRoute);
 
