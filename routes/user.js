@@ -29,31 +29,39 @@ router.post('/login',[body('email').isEmail()], userController.login);
 /**
  * @type : POST
  * @access : -
- * @description : This route is used to handle the status of whatsapp message status
- * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered ]
+ * @description : This route is used to  post the Latitude and Longitude of the User
+ * @requires : status :  {
+    "id" : "",
+      "Latitude" : "",
+        "Longitude" : "",
+    }
  */
 router.post('/latLong',[body('id').not().isEmpty()], userController.latLong);
 
 /**
  * @type : POST
  * @access : -
- * @description : This route is used to handle the status of whatsapp message status
- * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered ]
+ * @description : This route is used to post the Latitude and Longitude of the Officer
+ * @requires : status : {
+    "id" : "",
+      "Latitude" : "",
+        "Longitude" : "",
+    }
  */
 router.post('/latLongOfficer',[body('id').not().isEmpty()], userController.latLongOfficer);
 
 /**
  * @type : GET
  * @access : -user<Bearer token>
- * @description : This route is used to handle the status of whatsapp message status
- * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered]
+ * @description : This route is used to get the info about the User.
+ * @requires :  id<params> 
  */
 router.get('/getInfo/:id',checkAuth.checkAuth,userController.getInfo);
 
 /**
  * @type : PUT
  * @access : --user<Bearer token>
- * @description : This route is used to handle the status of whatsapp message status
+ * @description : This route is used to 
  * @requires : id<params>
  */
 router.put('/reset', [body('password').not().isEmpty()],checkAuth.checkAuth, userController.reset);
@@ -61,8 +69,8 @@ router.put('/reset', [body('password').not().isEmpty()],checkAuth.checkAuth, use
 /**
  * @type : POST
  * @access : -user<Bearer token>
- * @description : This route is used to handle the status of whatsapp message status
- * @requires : status : [ accepted, queued, failed, sending, sent, receiving, received, delivered, undelivered]
+ * @description : This route is used to update the Information of the User
+ * @requires : Any field related to the user
  */
 router.post('/updateInfo', checkAuth.checkAuth,userController.updateInfo);
 
