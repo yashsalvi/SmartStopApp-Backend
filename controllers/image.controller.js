@@ -10,7 +10,6 @@ function upload(req, res){
         handgun = true;
       else
         handgun = false;
-
       const drivingLicense = 'http://localhost:8086/uploads/' + req.files.drivingLicense[0].filename;
       const profileImage = 'http://localhost:8086/uploads/' + req.files.profileImage[0].filename;
       const insurance = 'http://localhost:8086/uploads/' + req.files.insurance[0].filename;
@@ -52,9 +51,6 @@ function upload(req, res){
               return record.update({ profileimage:profileimage });
             });
 
-            // res.status(500).json({
-            //   message: "Invalid credentials"
-            // })
           }
         }
       })
