@@ -36,7 +36,7 @@ router.post('/login',[body('email').isEmail()], userController.login);
         "Longitude" : "",
     }
  */
-router.post('/latLong',[body('id').not().isEmpty()], userController.latLong);
+router.post('/latLong',[body('id').not().isEmpty()] , userController.latLong);
 
 /**
  * @type : POST
