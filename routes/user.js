@@ -18,7 +18,7 @@ router.post('/signUp',[body('email').isEmail(), body('password').not().isEmpty()
 /**
  * @type : POST
  * @access : -
- * @description : This route is used to login the user
+ * @description : This route is used to Login
  * @requires :  {
     "email" : "",
     "password" : ""
@@ -61,8 +61,10 @@ router.get('/getInfo/:id',checkAuth.checkAuth,userController.getInfo);
 /**
  * @type : PUT
  * @access : --user<Bearer token>
- * @description : This route is used to 
- * @requires : id<params>
+ * @description : This route is used to reset the password of a User.
+ * @requires :  {
+    "password" : "",
+    }
  */
 router.put('/reset', [body('password').not().isEmpty()],checkAuth.checkAuth, userController.reset);
 
