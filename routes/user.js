@@ -29,7 +29,7 @@ router.post('/login',[body('email').isEmail()], userController.login);
 /**
  * @type : POST
  * @access : -
- * @description : This route is used to  post the Latitude and Longitude of the User
+ * @description : This route is used to  add the Latitude and Longitude of the User
  * @requires : status :  {
     "id" : "",
       "Latitude" : "",
