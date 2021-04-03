@@ -41,7 +41,7 @@ router.post('/latLong',[body('id').not().isEmpty()] , userController.latLong);
 /**
  * @type : POST
  * @access : -
- * @description : This route is used to post the Latitude and Longitude of the Officer
+ * @description : This route is used to add the Latitude and Longitude of the Officer
  * @requires : status : {
     "id" : "",
       "Latitude" : "",
