@@ -154,8 +154,6 @@ function latLong(req, res){
                                                }
                                               
                                             });
-                                         
-
                                            }else{
 
                                             res.status(404).json({
