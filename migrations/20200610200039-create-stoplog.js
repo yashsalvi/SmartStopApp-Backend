@@ -3,28 +3,28 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('Stoplog', {
    
-      firstname: {
+      firstName: {
         allowNull: false,
         type: Sequelize.STRING
         
       },
-      middlename: {
+      middleName: {
         allowNull: false,
         type: Sequelize.STRING
         
       },
-      lastname: {
+      lastName: {
         allowNull: false,
         type: Sequelize.STRING
         
       },
      
-      drivinglicensestate: {
+      drivingLicenseState: {
         allowNull: false,
         type: Sequelize.STRING
         
       },
-      Stoptime: {
+      stopTime: {
         allowNull: false,
         type: Sequelize.DATETIME
         
