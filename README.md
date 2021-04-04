@@ -48,4 +48,4 @@ $ npm start
 ```
 
 ## Visuals
-If required you can refer to the Screenshots and videos folder of the project.
+Please refer to the Video's & Screenshot folder of the project.
