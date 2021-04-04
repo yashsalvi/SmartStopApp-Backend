@@ -1,13 +1,11 @@
 {
   "development": {
-   
     "username": "root",
     "password": null,
     "database": "Smart_stop_db",
     "host": "localhost",
     "dialect": "mysql",
     "operatorsAliases": false
- 
   },
   "test": {
     "username": "root",
