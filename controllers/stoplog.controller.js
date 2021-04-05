@@ -7,7 +7,6 @@ function stops(req, res){
         lastname: req.body.lastname,
         drivinglicensestate:req.body.drivinglicensestate,
         stoptime:req.body.stoptime
- 
     }
     models.Stoplog.create(stoplog).then(result => {
         res.status(201).json({
