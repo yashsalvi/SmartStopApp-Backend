@@ -82,9 +82,7 @@ function signUp(req, res){
 
 
 //GPS
-
 function latLong(req, res){
-
      var lat1= req.body.Latitude;
      var lng1= req.body.Longitude;
      var driverId = req.body.id;
@@ -101,8 +99,7 @@ function latLong(req, res){
               
                 }).then(function (record) {
 
-                    models.User.findAll({where:{isPolice:1},  attributes: ['id','Latitude','Longitude']}).then(result => {
-                        
+                    models.User.findAll({where:{isPolice:1},  attributes: ['id','Latitude','Longitude']}).then(result => {                    
                         const arr = [];
                         const id= [];
                         const distance = [];                     
