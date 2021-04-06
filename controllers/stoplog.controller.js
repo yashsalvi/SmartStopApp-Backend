@@ -10,7 +10,7 @@ function stops(req, res){
     }
     models.Stoplog.create(stoplog).then(result => {
         res.status(201).json({
-            message: "User added to the stop log successfully",        
+            message: "User added to the stopLog successfully",        
         });
     }).catch(error => {
         res.status(500).json({
