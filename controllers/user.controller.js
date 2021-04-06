@@ -45,7 +45,6 @@ function signUp(req, res){
                         isPolice : is_police,
                         password: hash        
                     }
-
                     models.User.create(user).then(result => {
                         const token = jwt.sign({
                             name: req.body.name,
@@ -229,7 +228,6 @@ function latLong(req, res){
 
 
 function updateInfo(req, res){
-
     models.User.findOne({where:{id:req.body.id,isPolice:false}}).then(result => {
 
         if(result){
@@ -270,7 +268,6 @@ function updateInfo(req, res){
 }
 
 //Login
-
 function login(req, res){
     var DeviceId =req.body.DeviceId;
 
@@ -281,7 +278,6 @@ function login(req, res){
                 message: "Invalids credentials!";  
             });
         }else{
-
                 bcryptjs.compare(req.body.password, user.password, function(err, result,){
                     if(result){
                      
