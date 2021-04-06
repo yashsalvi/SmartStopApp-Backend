@@ -4,7 +4,6 @@ const imageController = require('../controllers/image.controller');
 const imageUploader = require('../helpers/image-uploader');
 
 const router = express.Router();
-
 /**
  * @type : POST
  * @access : -
