@@ -5,5 +5,4 @@ const router = express.Router();
 
 router.post('/stops', stoplogController.stops);
 
-
 module.exports = router;
