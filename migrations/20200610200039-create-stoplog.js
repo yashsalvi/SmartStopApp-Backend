@@ -1,8 +1,9 @@
 'use strict';
+
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable('Stoplog', {
-   
+
       firstName: {
         allowNull: false,
         type: Sequelize.STRING
