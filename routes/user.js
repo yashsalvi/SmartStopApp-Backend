@@ -5,7 +5,6 @@ const { check, body } = require('express-validator');
 
 const router = express.Router();
 
-
 /**
  * @type : POST
  * @access : -
