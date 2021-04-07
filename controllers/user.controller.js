@@ -60,8 +60,7 @@ function signUp(req, res){
                                 is_Police :is_police 
                                }
                            });
-                       });
-                               
+                       });                              
                    }).catch(error => {
                        res.status(500).json({
                           
@@ -78,7 +77,6 @@ function signUp(req, res){
        });
    });
 }
-
 
 //GPS
 function latLong(req, res){
