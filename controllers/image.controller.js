@@ -36,7 +36,6 @@ function upload(req, res){
             });
           }
         else{
-
           res.status(200).json({
             success:
               {        
@@ -44,7 +43,6 @@ function upload(req, res){
                 profileimage,
               }
       });
-
           models.User.findOne({ where: {id : req.params.id}})
           .then(function (record) {
               return record.update({ profileimage:profileimage });
