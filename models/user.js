@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
     Longitude: DataTypes.STRING,
     isPolice: DataTypes.BOOLEAN
   }, {});
+  
   User.associate = function(models) {
   };
   return User;
