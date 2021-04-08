@@ -21,7 +21,6 @@ function stops(req, res){
     });
 }
 
-
 module.exports = {
     stops: stops,  
 }
