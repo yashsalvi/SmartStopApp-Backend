@@ -12,7 +12,6 @@ const router = express.Router();
     "password" : ""
  */
 router.post('/signUp',[body('email').isEmail(), body('password').not().isEmpty()], userController.signUp);
-
 /**
  * @type : POST
  * @access : -
