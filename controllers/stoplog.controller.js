@@ -1,5 +1,4 @@
 const models = require('../models');
-
 function stops(req, res){
     const stoplog = {
         firstname: req.body.firstname,
