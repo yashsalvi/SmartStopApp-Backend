@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator');
 var haversine = require("haversine-distance");
 
+
 //Sign up
 function signUp(req, res){
     // Validation Errors
