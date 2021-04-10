@@ -1,5 +1,4 @@
 'use strict';
-
 module.exports = (sequelize, DataTypes) => {
   const stopLog = sequelize.define('stopLog', {
     firstName: DataTypes.STRING,
