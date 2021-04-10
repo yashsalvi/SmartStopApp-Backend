@@ -16,6 +16,7 @@ const fileFilter = (req, file, cb) => {
         cb(new Error('Unsupported files'), false);
     }
 }
+
 const upload = multer({
     storage: storage,
     limits: {
