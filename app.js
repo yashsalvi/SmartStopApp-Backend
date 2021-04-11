@@ -7,7 +7,6 @@ const imageRoute = require('./routes/images');
 
 const app = express();
 app.use(bodyParser.json());
-
 app.use('/uploads', express.static('uploads'));
 app.use("/user", userRoute);
 app.use("/stopLog", stopLogRoute);
