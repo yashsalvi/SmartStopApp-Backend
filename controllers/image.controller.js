@@ -48,7 +48,6 @@ function upload(req, res){
           .then(function (record) {
               return record.update({ profileimage:profileimage });
             });
-
           }
         }
       })
