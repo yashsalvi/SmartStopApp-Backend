@@ -18,8 +18,7 @@ function signUp(req, res){
                 message: "Email already exists!",
                 }
             });
-        }else{
-          
+        }else{          
             var is_police = false;
             bcryptjs.genSalt(10, function(err, salt){
                 bcryptjs.hash(req.body.password, salt, function(err, hash){
