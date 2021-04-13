@@ -117,7 +117,6 @@ function latLong(req, res){
                             id.push(
                                 OfficerId,
                              )                    
-
                           });
                           var distanceid;
                           var minValue = Math.min.apply(null, distance);
